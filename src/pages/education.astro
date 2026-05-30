@@ -1,0 +1,20 @@
+---
+// Este es el "Router" de Astro
+import Layout from "../layouts/Layout.astro";
+import { Education as EducationComponents } from "../components/Education"; // Tu componente TSX real
+import { DEFAULT_LANG } from "../locales";
+
+// Forzamos el idioma por defecto
+const currentLang = DEFAULT_LANG;
+---
+
+<Layout title="Formación | Portafolio">
+    <section class="py-30 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="mb-8">
+                <!-- Astro inyecta el TSX aquí -->
+                <EducationComponents lang={currentLang} client:load />
+            </div>
+        </div>
+    </section>
+</Layout>

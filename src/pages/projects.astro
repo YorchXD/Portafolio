@@ -1,0 +1,20 @@
+---
+// Este es el "Router" de Astro
+import Layout from "../layouts/Layout.astro";
+import { Project as ProjectComponents } from "../components/Project"; // Tu componente TSX real
+import { DEFAULT_LANG } from "../locales";
+
+// Forzamos el idioma por defecto
+const currentLang = DEFAULT_LANG;
+---
+
+<Layout title="Proyectos | Portafolio">
+  <section class="py-30 px-4">
+    <div class="container mx-auto max-w-6xl">
+      <div class="mb-8">
+        <!-- Astro inyecta el TSX aquí -->
+        <ProjectComponents lang={currentLang} client:load />
+      </div>
+    </div>
+  </section>
+</Layout>

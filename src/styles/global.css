@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* :root {
+  --brand-green: 149.214; 
+} */
+
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -50px); }
+  100% { transform: translate(0, 0); }
+}
+
+.animate-float {
+  animation: float 20s infinite ease-in-out;
+}
+
+@theme {
+  /* 2. Definición de Colores (Paleta Apple Grays) */
+  --color-apple-gray-50: #f5f5f7;
+  --color-apple-gray-100: #e8e8ed;
+  --color-apple-gray-200: #d2d2d7;
+  --color-apple-gray-300: #86868b;
+  --color-apple-gray-400: #6e6e73;
+  --color-apple-gray-500: #1d1d1f;
+
+  /* 3. Tipografía */
+  --font-sans: "SF Pro Display", "Inter Variable", system-ui, sans-serif;
+}
+
+/* 5. Reseteo y Estilos Base (Lo que antes estaba en Welcome.astro) */
+@layer base {
+  html, body {
+    font-family: var(--font-sans);
+    line-height: 1.5; /* Un poco más de aire mejora la legibilidad técnica */
+    font-weight: 450; /* Un ajuste sutil para que el texto tenga más cuerpo */
+    letter-spacing: -0.015em;
+    
+    /* Reemplazamos el gris plano por el degradado técnico */
+    /* background: radial-gradient(
+      circle at center,
+      white 0%,
+      oklch(98% 0.02 149.214) 50%, 
+      oklch(94% 0.04 149.214) 100%
+    );
+    background-attachment: fixed; */
+    
+    color: #1d1d1f; /* Un negro casi puro (estilo Apple) para máximo contraste */
+    -webkit-font-smoothing: antialiased; /* Hace que las letras se vean más nítidas */
+  }
+}
+
+/* 6. Utilidades personalizadas para efectos de vidrio (Glassmorphism)*/
+@layer utilities {
+  .glass-card {
+    background-color: rgb(255 255 255 / 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgb(255 255 255 / 0.5);
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+/* Forzamos el estado inicial para que no "parpadeen" al cargar */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  /* 'cubic-bezier' da ese toque suave de Apple: rápido al inicio, lento al final */
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+}
+
+.reveal-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.info-principal-delay {
+  transition-delay: 0ms;
+}
+
+@media (min-width: 1024px) {
+  .info-principal-delay {
+    transition-delay: 850ms;
+  }
+}
