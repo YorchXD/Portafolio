@@ -22,7 +22,7 @@ export const Home = ({ lang }: { lang: Language }) => {
                         {/* Foto de Perfil con estilo Apple (Vidrio y Sombra suave)*/}
                         <div className="w-50 h-50 rounded-full border-4 border-white/50 shadow-xl mb-6 overflow-hidden bg-gradient-to-br from-pink-100 to-pink-50 reveal">
                             <img
-                                src="../../public/images/mi_perfil.png"
+                                src="/images/mi_perfil.png"
                                 alt="Yorch"
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
