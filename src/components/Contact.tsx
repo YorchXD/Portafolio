@@ -114,7 +114,7 @@ export const Contact = ({ lang }: { lang: Language }) => {
                             <button
                                 type="submit"
                                 disabled={status === 'sending'}
-                                className="w-full bg-gradient-to-r from-green-600 to-green-700 text-white font-medium px-6 py-3 rounded-xl hover:from-green-700 hover:to-green-800 transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="w-full bg-linear-to-r from-green-600 to-green-700 text-white font-medium px-6 py-3 rounded-xl hover:from-green-700 hover:to-green-800 transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                                 {status === 'sending' ? t.contact.form.sending : t.contact.form.submit}
                             </button>
@@ -175,7 +175,7 @@ export const Contact = ({ lang }: { lang: Language }) => {
                             </div>
                         </div>
 
-                        <div className="bg-gradient-to-br from-green-50 to-purple-50 rounded-2xl p-6">
+                        <div className="bg-linear-to-br from-green-50 to-purple-50 rounded-2xl p-6">
                             <h4 className="text-lg font-medium text-apple-gray-500 mb-4">{t.contact.business_hours.title}</h4>
                             <div className="space-y-2 text-apple-gray-400">
                                 <p>{t.contact.business_hours.day}</p>

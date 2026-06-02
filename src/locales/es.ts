@@ -204,7 +204,7 @@ export const es = {
     info_contact: {
       title: "Información de contacto",
       email: "yorch5.77@gmail.com",
-      phone: "+56 9 1234 5678",
+      phone: "+56 9 4932 1952",
       location: "Talca, Chile"
     },
     business_hours: {
