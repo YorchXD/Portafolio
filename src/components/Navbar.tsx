@@ -26,7 +26,10 @@ export const Navbar = ({ currentPath, lang }: { currentPath: string; lang: Langu
     { name: t.nav.contact, href: "/contact" },
   ];
 
-  const currentLink = navLinks.find(link => link.href === currentPath);
+  const normalizedPath = currentPath.endsWith('/') && currentPath !== '/' 
+    ? currentPath.slice(0, -1) 
+    : currentPath;
+  const currentLink = navLinks.find(link => link.href === normalizedPath);
   const pageTitle = currentLink ? currentLink.name : "Menú";
 
   return (
@@ -86,21 +89,21 @@ export const Navbar = ({ currentPath, lang }: { currentPath: string; lang: Langu
         }
       `}} />
 
-      <nav className="transition-all duration-500 ease-in-out max-w-7xl mx-auto flex items-center justify-between px-6 py-2 rounded-full w-full relative min-h-[56px]">
+      <nav className="transition-all duration-500 ease-in-out max-w-7xl mx-auto flex items-center justify-between px-6 py-2 rounded-full w-full relative min-h-14">
 
         {/* ========================================================================= */}
         {/* 1. CONTROLES EXCLUSIVOS PARA MÓVIL (<= 825px)                            */}
         {/* ========================================================================= */}
 
         {/* LOGO MINIMALISTA EN MÓVIL: Posicionado de forma fija a la izquierda */}
-        <div className="absolute left-6 top-[8px] lg:hidden ssr-mobile-only mobile-logo-container z-50">
+        <div className="absolute left-6 top-2 lg:hidden ssr-mobile-only mobile-logo-container z-50">
           <Logo lang={lang} />
         </div>
 
         {/* BOTÓN HAMBURGUESA: Mantiene su posición limpia a la derecha */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="absolute right-6 top-[8px] w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-md text-gray-600 hover:text-green-600 focus:outline-none transition-all duration-300 z-50 ssr-mobile-only mobile-toggle-btn"
+          className="absolute right-6 top-2 w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-md text-gray-600 hover:text-green-600 focus:outline-none transition-all duration-300 z-50 ssr-mobile-only mobile-toggle-btn"
           aria-label="Toggle Menu"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -146,7 +149,7 @@ export const Navbar = ({ currentPath, lang }: { currentPath: string; lang: Langu
         {/* 2. ESTRUCTURA DE ESCRITORIO (> 825px)                                    */}
         {/* ========================================================================= */}
         <div className="items-center justify-between w-full ssr-desktop-only hidden gap-4">
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <Logo lang={lang} />
           </div>
 
@@ -154,7 +157,7 @@ export const Navbar = ({ currentPath, lang }: { currentPath: string; lang: Langu
             {navLinks.map((link) => {
               const isActive = currentPath === link.href || (currentPath === '' && link.href === '/');
               return (
-                <li key={link.href} className="flex-shrink-0">
+                <li key={link.href} className="shrink-0">
                   <a
                     href={link.href}
                     className={`text-xs sm:text-sm font-medium px-4 py-2 rounded-full transition-all duration-300 whitespace-nowrap ${
