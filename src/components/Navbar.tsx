@@ -53,9 +53,6 @@ export const Navbar = ({ currentPath, lang }: { currentPath: string; lang: Langu
             backdrop-filter: blur(24px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
           }
-          :is(.dark .nav-header-responsive.scrolled-nav) {
-            background-color: rgba(17, 24, 39, 0.8);
-          }
         }
 
         /* ========================================== */
@@ -71,9 +68,6 @@ export const Navbar = ({ currentPath, lang }: { currentPath: string; lang: Langu
             background-color: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(24px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-          }
-          :is(.dark .nav-header-responsive) {
-            background-color: rgba(17, 24, 39, 0.8);
           }
 
           /* FUERZA AL LOGO A SER MINIMALISTA ESCONDIENDO EL TEXTO INTERNO Y LA LÍNEA */
@@ -106,7 +100,7 @@ export const Navbar = ({ currentPath, lang }: { currentPath: string; lang: Langu
         {/* BOTÓN HAMBURGUESA: Mantiene su posición limpia a la derecha */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="absolute right-6 top-[8px] w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-md text-gray-600 dark:text-gray-300 hover:text-green-600 focus:outline-none transition-all duration-300 z-50 ssr-mobile-only mobile-toggle-btn"
+          className="absolute right-6 top-[8px] w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-md text-gray-600 hover:text-green-600 focus:outline-none transition-all duration-300 z-50 ssr-mobile-only mobile-toggle-btn"
           aria-label="Toggle Menu"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -119,7 +113,7 @@ export const Navbar = ({ currentPath, lang }: { currentPath: string; lang: Langu
         </button>
 
         {/* TÍTULO DINÁMICO (Oculto cuando el menú móvil se despliega) */}
-        <span className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-xs font-bold text-gray-700 dark:text-gray-200 uppercase tracking-widest whitespace-nowrap ssr-mobile-only
+        <span className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-xs font-bold text-gray-700 uppercase tracking-widest whitespace-nowrap ssr-mobile-only
           ${isOpen
             ? 'opacity-0 pointer-events-none scale-95'
             : 'opacity-100 scale-100 transition-all duration-300'
@@ -138,7 +132,7 @@ export const Navbar = ({ currentPath, lang }: { currentPath: string; lang: Langu
                   href={link.href}
                   onClick={() => setIsOpen(false)}
                   className={`block text-xs sm:text-sm font-medium px-4 py-2 rounded-full transition-all duration-300 ${
-                    isActive ? "bg-green-600 text-white shadow-md scale-105" : "text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 hover:bg-white/50 dark:hover:bg-gray-800/50"
+                    isActive ? "bg-green-600 text-white shadow-md scale-105" : "text-gray-600 hover:text-green-600 hover:bg-white/50"
                   }`}
                 >
                   {link.name}
@@ -164,7 +158,7 @@ export const Navbar = ({ currentPath, lang }: { currentPath: string; lang: Langu
                   <a
                     href={link.href}
                     className={`text-xs sm:text-sm font-medium px-4 py-2 rounded-full transition-all duration-300 whitespace-nowrap ${
-                      isActive ? "bg-green-600 text-white shadow-md scale-105" : "text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 hover:bg-white/50 dark:hover:bg-gray-800/50"
+                      isActive ? "bg-green-600 text-white shadow-md scale-105" : "text-gray-600 hover:text-green-600 hover:bg-white/50"
                     }`}
                   >
                     {link.name}

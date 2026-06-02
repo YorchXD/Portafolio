@@ -27,7 +27,7 @@ export const Education = ({ lang }: { lang: Language }) => {
                     <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
                 </svg>
             </div>
-            <div className="bg-white/80 dark:bg-gray-800 backdrop-blur-lg rounded-3xl p-6 shadow-xl  reveal">
+            <div className="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl  reveal">
                 <h3 className="text-2xl font-semibold mb-6">{t.formation.item_education.title}</h3>
                 <div className="space-y-6">
                     {t.formation.item_education.education.map((edu) => (
@@ -51,7 +51,7 @@ export const Education = ({ lang }: { lang: Language }) => {
                 </div>
             </div>
 
-            <div className="bg-white/80 dark:bg-gray-800 backdrop-blur-lg rounded-3xl p-6 shadow-xl reveal">
+            <div className="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl reveal">
                 <h3 className="text-2xl font-semibold mb-6">{t.formation.item_complementary_education.title}</h3>
                 <div className="space-y-6">
                     {t.formation.item_complementary_education.education.map((edu) => (
@@ -75,7 +75,7 @@ export const Education = ({ lang }: { lang: Language }) => {
                 </div>
             </div>
 
-            <div className="bg-white/80 dark:bg-gray-800 backdrop-blur-lg rounded-3xl p-6 shadow-xl reveal">
+            <div className="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl reveal">
                 <h3 className="text-2xl font-semibold mb-6">{t.formation.item_academic_experience.title}</h3>
                 <div className="space-y-6">
                     {t.formation.item_academic_experience.education.map((edu) => (

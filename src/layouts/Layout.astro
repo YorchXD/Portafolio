@@ -18,7 +18,7 @@ const currentLang = DEFAULT_LANG;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" style="color-scheme: light;">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -26,10 +26,26 @@ const currentLang = DEFAULT_LANG;
       content="Ingeniero Civil en Computación especializado en React, .NET y desarrollo Full Stack. Portafolio con proyectos, experiencia y contacto."
     />
     <meta name="viewport" content="width=device-width" />
-    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/images/favicons/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/images/favicons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/images/favicons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/images/favicons/apple-icon-76x76.png"
+    />
     <link
       rel="apple-touch-icon"
       sizes="114x114"
@@ -61,9 +77,24 @@ const currentLang = DEFAULT_LANG;
       sizes="192x192"
       href="/images/favicons/android-icon-192x192.png"
     />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/images/favicons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicons/favicon-16x16.png"
+    />
     <link rel="manifest" href="/manifest.json" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
@@ -90,26 +121,32 @@ const currentLang = DEFAULT_LANG;
     <meta name="twitter:image" content="/images/logo-Yorch.png" />
   </head>
   <body class="">
+    <!-- Colores de fondo -->
     <div class="fixed inset-0 -z-10 overflow-hidden bg-gray-100">
-      <div
-        class="absolute top-[-15%] left-[-10%] w-[70%] h-[70%] rounded-full bg-green-600 opacity-90 blur-[90px] animate-[pulse_7s_infinite]"
-      >
+      <div class="absolute top-[-15%] left-[-10%] w-[70%] h-[70%] rounded-full bg-green-600 opacity-90 blur-[90px] animate-[pulse_7s_infinite]">
       </div>
 
-      <div
-        class="absolute bottom-[-15%] right-[-10%] w-[80%] h-[80%] rounded-full bg-amber-400 opacity-90 blur-[100px] animate-[pulse_9s_infinite]"
-      >
+      <div class="absolute bottom-[-15%] right-[-10%] w-[80%] h-[80%] rounded-full bg-amber-400 opacity-90 blur-[100px] animate-[pulse_9s_infinite]">
       </div>
 
-      <div
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-full bg-white opacity-100 blur-[130px]"
-      >
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-full bg-white opacity-100 blur-[130px]">
       </div>
     </div>
 
     <!-- El slot es donde se inyectará tu página (index.astro) -->
     <Navbar currentPath={pathname} lang={currentLang} client:load />
     <slot />
+
+    <script>
+      // Se ejecuta inmediatamente en el navegador
+      document.documentElement.classList.remove("dark");
+      document.documentElement.style.colorScheme = "light";
+
+      // Por si acaso guardaste algo en el localStorage en pruebas anteriores, lo limpiamos
+      if (localStorage.getItem("theme") === "dark") {
+        localStorage.removeItem("theme");
+      }
+    </script>
   </body>
 </html>
 

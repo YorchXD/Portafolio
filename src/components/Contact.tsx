@@ -62,7 +62,7 @@ export const Contact = ({ lang }: { lang: Language }) => {
                 </svg>
             </div>
 
-            <section id="contact" className="bg-white/80 dark:bg-gray-800 backdrop-blur-lg rounded-3xl p-8 shadow-lg reveal">
+            <section id="contact" className="bg-white/80 backdrop-blur-lg rounded-3xl p-8 shadow-lg reveal">
                 <h3 className="text-2xl font-semibold mb-6">{t.contact.title}</h3>
                 <div className="grid md:grid-cols-2 gap-8">
                     {/* <!-- Contact Form --> */}

@@ -35,10 +35,10 @@ export const About = ({ lang }: { lang: Language }) => {
                     />
                 </svg>
             </div>
-            <div className="bg-white/80 dark:bg-gray-800 backdrop-blur-lg rounded-3xl p-6 shadow-xl reveal">
+            <div className="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl reveal">
                 <div className="space-y-6">
                     {t.about.text.map((paragraph, index) => (
-                        <p key={index} className="text-apple-gray-400 dark:text-gray-300 text-justify leading-relaxed mb-4 hyphens-auto">
+                        <p key={index} className="text-apple-gray-400 text-justify leading-relaxed mb-4 hyphens-auto">
                             {paragraph}
                         </p>
                     ))}

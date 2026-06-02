@@ -1,8 +1,19 @@
 @import "tailwindcss";
 
-/* :root {
-  --brand-green: 149.214; 
-} */
+/* Forzar que la variante 'dark' nunca se cumpla */
+@custom-variant dark (&:not(*));
+
+:root {
+  color-scheme: light;
+}
+
+/* Opcional: Si quieres asegurarte de que Tailwind no genere 
+   variables de color oscuro basadas en el sistema */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light !important;
+  }
+}
 
 @keyframes float {
   0% { transform: translate(0, 0); }
@@ -25,6 +36,8 @@
 
   /* 3. Tipografía */
   --font-sans: "SF Pro Display", "Inter Variable", system-ui, sans-serif;
+
+  --variant-dark: .dark &;
 }
 
 /* 5. Reseteo y Estilos Base (Lo que antes estaba en Welcome.astro) */

@@ -32,7 +32,7 @@ export const Skills = ({ lang }: { lang: Language }) => {
       {/* INTRO PEQUEÑA ARRIBA */}
       <div className="text-center max-w-2xl mx-auto mb-16 px-4 reveal">
         {/* DEJAMOS SOLO LA DESCRIPCIÓN: Equilibrada, legible y con contraste premium */}
-        <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
+        <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-medium">
           {t.skills.description_principal}
         </p>
       </div>
@@ -42,14 +42,14 @@ export const Skills = ({ lang }: { lang: Language }) => {
         {t.skills.skillsData.map((category, idx) => (
           <div
             key={idx}
-            className="reveal bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl"
+            className="reveal bg-white p-8 rounded-2xl shadow-xl"
           >
             <div>
-              <h4 className="text-2xl font-bold text-apple-gray-500 dark:text-white leading-tight mb-6">
+              <h4 className="text-2xl font-bold text-apple-gray-500 leading-tight mb-6">
                 {/* <span className="w-2 h-2 rounded-full bg-green-600"></span> */}
                 {category.title}
               </h4>
-              <p className="text-apple-gray-400 dark:text-gray-300 text-justify leading-relaxed mb-8 hyphens-auto">
+              <p className="text-apple-gray-400 text-justify leading-relaxed mb-8 hyphens-auto">
                 {category.description}
               </p>
             </div>
@@ -59,7 +59,7 @@ export const Skills = ({ lang }: { lang: Language }) => {
               {category.skills.map((skill, sIdx) => (
                 <span
                   key={sIdx}
-                  className="px-3 py-1 bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 rounded-lg text-xs font-medium border border-green-100 dark:border-green-800 transition-colors hover:bg-green-100 dark:hover:bg-green-900/40"
+                  className="px-3 py-1 bg-green-50 text-green-600 rounded-lg text-xs font-medium border border-green-100 transition-colors hover:bg-green-100"
                 >
                   {skill}
                 </span>
@@ -70,15 +70,15 @@ export const Skills = ({ lang }: { lang: Language }) => {
       </div>
 
       {/* SECCIÓN ESPECIAL: TECNOLOGÍAS DEL PORTFOLIO */}
-      <div className="p-8 reveal bg-green-50 dark:bg-gray-800 rounded-2xl shadow-xl">
+      <div className="p-8 reveal bg-green-50 rounded-2xl shadow-xl">
         {/* Ajustamos el text-center por defecto para móviles, y lg:text-left para escritorio */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:gap-6 text-justify lg:text-left">
           <div className="max-w-xl mx-auto lg:mx-0">
-            <h4 className="text-2xl font-bold text-apple-gray-500 dark:text-white leading-tight mb-6">
+            <h4 className="text-2xl font-bold text-apple-gray-500 leading-tight mb-6">
               {t.skills.portafolioTech.title}
             </h4>
             {/* Cambié text-justify por text-center en móvil para evitar espacios raros, manteniendo el estilo en lg */}
-            <p className="text-apple-gray-400 dark:text-gray-300 lg:text-justify leading-relaxed mb-8 hyphens-auto">
+            <p className="text-apple-gray-400 text-justify leading-relaxed mb-8 hyphens-auto">
               {t.skills.portafolioTech.description}
             </p>
           </div>
@@ -88,7 +88,7 @@ export const Skills = ({ lang }: { lang: Language }) => {
             {t.skills.portafolioTech.skills.map((tech, idx) => (
               <span
                 key={idx}
-                className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white text-green-700 dark:text-green-400 border border-green-600/20 shadow-sm"
+                className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white text-green-700 border border-green-600/20 shadow-sm"
               >
                 {tech}
               </span>

@@ -43,7 +43,7 @@ export const Logo = ({ lang }: { lang: Language }) => {
           strokeWidth="20" 
           strokeLinecap="square" 
           strokeLinejoin="miter"
-          className="dark:stroke-green-500 transition-colors duration-300"
+          className="transition-colors duration-300"
         />
 
         {/* 'Y' FANTASMA (Sombra/Reflejo de fondo) */}
@@ -53,7 +53,7 @@ export const Logo = ({ lang }: { lang: Language }) => {
           strokeWidth="20" 
           strokeLinecap="square" 
           strokeLinejoin="miter"
-          className="dark:stroke-green-900/30 transition-colors duration-300" 
+          className="transition-colors duration-300" 
         />
 
         {/* LETRA 'Y' PRINCIPAL (Gris Grafito) */}
@@ -63,7 +63,7 @@ export const Logo = ({ lang }: { lang: Language }) => {
           strokeWidth="20" 
           strokeLinecap="square" 
           strokeLinejoin="miter"
-          className="dark:stroke-slate-300 transition-colors duration-300"
+          className="transition-colors duration-300"
         />
 
         {/* Fondo sutil verde claro para el punto de estado */}
@@ -87,16 +87,16 @@ export const Logo = ({ lang }: { lang: Language }) => {
           stroke="#94A3B8" 
           strokeWidth="6" 
           strokeLinecap="round"
-          className="hidden lg:block dark:stroke-slate-600 transition-colors duration-300"
+          className="hidden lg:block transition-colors duration-300"
         />
       </svg>
 
       {/* TEXTO CORPORATIVO TAILWIND */}
       <div className="hidden lg:flex flex-col justify-center ml-1 -mt-1">
-        <span className="text-base font-black tracking-wider text-slate-800 dark:text-slate-100 uppercase transition-colors duration-300">
+        <span className="text-base font-black tracking-wider text-slate-800 uppercase transition-colors duration-300">
           {t.logo.ing}
         </span>
-        <span className="text-xs font-bold tracking-[0.38em] text-green-600 dark:text-green-400 uppercase -mt-1">
+        <span className="text-xs font-bold tracking-[0.38em] text-green-600 uppercase -mt-1">
           {t.logo.digital}
         </span>
       </div>

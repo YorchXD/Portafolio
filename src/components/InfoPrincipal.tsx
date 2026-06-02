@@ -29,7 +29,7 @@ export const InfoPrincipal = ({ lang }: { lang: Language }) => {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:-mt-35 lg:grid-cols-4 gap-4 pb-6 reveal info-principal-delay">
             {/* Location Widget */}
-            <div className="bg-white/80 dark:bg-gray-800 backdrop-blur-lg rounded-2xl p-4 shadow-lg border border-white/20">
+            <div className="bg-white/80 backdrop-blur-lg rounded-2xl p-4 shadow-lg border border-white/20">
                 <div className="flex items-center gap-3">
                     <div className="w-8 h-8 flex items-center justify-center bg-red-100 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-red-600">
@@ -48,7 +48,7 @@ export const InfoPrincipal = ({ lang }: { lang: Language }) => {
             </div>
 
             {/* Time Widget */}
-            <div className="bg-white/80 dark:bg-gray-800 backdrop-blur-lg rounded-2xl p-4 shadow-lg border border-white/20">
+            <div className="bg-white/80 backdrop-blur-lg rounded-2xl p-4 shadow-lg border border-white/20">
                 <div className="flex items-center gap-3">
                     <div className="w-8 h-8 flex items-center justify-center bg-purple-100 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-purple-600">
@@ -73,7 +73,7 @@ export const InfoPrincipal = ({ lang }: { lang: Language }) => {
             </div>
 
             {/*Availability Widget*/}
-            <div className="bg-white/80 dark:bg-gray-800 backdrop-blur-lg rounded-2xl p-4 shadow-lg border border-white/20">
+            <div className="bg-white/80 backdrop-blur-lg rounded-2xl p-4 shadow-lg border border-white/20">
                 <div className="flex items-center gap-3">
                     <div className="w-8 h-8 flex items-center justify-center bg-green-100 rounded-full">
                         <span className="relative flex h-3 w-3">
@@ -90,7 +90,7 @@ export const InfoPrincipal = ({ lang }: { lang: Language }) => {
             </div>
 
             {/* Social Links Widget */}
-            <div className="bg-white/80 dark:bg-gray-800 backdrop-blur-lg rounded-2xl p-4 shadow-lg border border-white/20">
+            <div className="bg-white/80 backdrop-blur-lg rounded-2xl p-4 shadow-lg border border-white/20">
                 <div className="flex items-center gap-3">
                     <div className="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-blue-600">

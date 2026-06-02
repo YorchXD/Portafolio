@@ -31,7 +31,7 @@ export const Project = ({ lang }: { lang: Language }) => {
 
             {/* INTRO PEQUEÑA ARRIBA */}
             <div className="text-center max-w-2xl mx-auto mb-16 px-4 reveal">
-                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-medium">
                     {t.project.description_principal}
                 </p>
             </div>
@@ -42,17 +42,17 @@ export const Project = ({ lang }: { lang: Language }) => {
                 {/* ========================================================================= */}
                 {/* OPCIÓN 1: CARD ACTUAL TEMPORAL (Activa, minimalista, fondo blanco y centrada) */}
                 {/* ========================================================================= */}
-                <div className="p-20 bg-white/80 dark:bg-gray-800 backdrop-blur-lg rounded-3xl flex flex-col justify-center items-center text-center shadow-lg reveal">
+                <div className="p-20 bg-white/80 backdrop-blur-lg rounded-3xl flex flex-col justify-center items-center text-center shadow-lg reveal">
                     <div className="flex items-center gap-2 mb-3">
                         <span className="relative flex h-2 w-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                         </span>
-                        <span className="text-xs font-semibold uppercase tracking-wider text-green-600 dark:text-green-400">
+                        <span className="text-xs font-semibold uppercase tracking-wider text-green-600">
                             {t.project.coming_soon}
                         </span>
                     </div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 font-medium text-justify px-4 leading-relaxed italic">
+                    <p className="text-sm text-gray-500 font-medium text-justify px-4 leading-relaxed italic">
                         {t.project.available_soon}
                     </p>
                 </div>
@@ -60,7 +60,7 @@ export const Project = ({ lang }: { lang: Language }) => {
                 {/* ========================================================================= */}
                 {/* OPCIÓN 2: CARD AVANZADA COMPLETA (Comentada para uso futuro)               */}
                 {/* ========================================================================= */}
-                {/* <div className="p-6 rounded-2xl bg-white dark:bg-gray-900 border border-dashed border-gray-300 dark:border-gray-700 hover:border-green-600/50 dark:hover:border-green-600/50 transition-all duration-500 flex flex-col justify-between min-h-[280px] relative overflow-hidden group max-w-sm w-full">
+                {/* <div className="p-6 rounded-2xl bg-white border border-dashed border-gray-300 hover:border-green-600/50 transition-all duration-500 flex flex-col justify-between min-h-[280px] relative overflow-hidden group max-w-sm w-full">
                     <div className="absolute -right-10 -top-10 w-32 h-32 bg-green-600/5 rounded-full blur-2xl group-hover:bg-green-600/10 transition-all duration-500 pointer-events-none" />
                     <div>
                         <div className="flex items-center gap-2 mb-4">
@@ -68,14 +68,14 @@ export const Project = ({ lang }: { lang: Language }) => {
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                             </span>
-                            <span className="text-xs font-semibold uppercase tracking-wider text-green-600 dark:text-green-400">
+                            <span className="text-xs font-semibold uppercase tracking-wider text-green-600">
                                 Próximamente
                             </span>
                         </div>
-                        <h3 className="text-xl font-bold text-gray-400 dark:text-gray-500 mb-3 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors duration-300">
+                        <h3 className="text-xl font-bold text-gray-400 mb-3 group-hover:text-gray-600 transition-colors duration-300">
                             Nuevo Proyecto Full Stack
                         </h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed italic text-justify">
+                        <p className="text-sm text-gray-500 leading-relaxed italic text-justify">
                             Actualmente diseñando y programando una nueva aplicación web enfocada en resolver problemas del mundo real. ¡Disponible muy pronto!
                         </p>
                     </div>
@@ -84,7 +84,7 @@ export const Project = ({ lang }: { lang: Language }) => {
                             {futureTech.map((tech, idx) => (
                                 <span
                                     key={idx}
-                                    className="px-2.5 py-1 text-xs font-medium rounded-md bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-700"
+                                    className="px-2.5 py-1 text-xs font-medium rounded-md bg-gray-100 border border-gray-200"
                                 >
                                     {tech}
                                 </span>

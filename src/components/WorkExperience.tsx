@@ -40,7 +40,7 @@ export const WorkExperience = ({ lang }: { lang: Language }) => {
 
       <div className="relative">
         {/* Línea Vertical Central */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-green-200 dark:bg-green-900/30 hidden md:block reveal"></div>
+        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-green-200 hidden md:block reveal"></div>
 
         <div className="space-y-16">
           {t.experiences.items.map((item, index) => {
@@ -51,21 +51,21 @@ export const WorkExperience = ({ lang }: { lang: Language }) => {
 
                 {/* 1. Lado del Contenido (Se alterna gracias a flex-row-reverse) */}
                 <div className="w-full md:w-[45%]">
-                  <div className="reveal bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl border-t-4 border-green-600">
+                  <div className="reveal bg-white p-8 rounded-2xl shadow-xl border-t-4 border-green-600">
 
                     {/* Header de la tarjeta */}
                     <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-6">
                       <div>
-                        <h4 className="text-2xl font-bold text-apple-gray-500 dark:text-white leading-tight">{item.title}</h4>
-                        <p className="text-green-600 dark:text-green-400 font-semibold mt-1">{item.company}</p>
+                        <h4 className="text-2xl font-bold text-apple-gray-500 leading-tight">{item.title}</h4>
+                        <p className="text-green-600 font-semibold mt-1">{item.company}</p>
                       </div>
-                      <span className="text-xs font-bold text-white bg-green-600 dark:bg-green-700 px-3 py-1 rounded-full uppercase tracking-wider whitespace-nowrap">
+                      <span className="text-xs font-bold text-white bg-green-600 px-3 py-1 rounded-full uppercase tracking-wider whitespace-nowrap">
                         {item.period}
                       </span>
                     </div>
 
                     {/* Descripción Justificada */}
-                    <p className="text-apple-gray-400 dark:text-gray-300 text-justify leading-relaxed mb-8 hyphens-auto">
+                    <p className="text-apple-gray-400 text-justify leading-relaxed mb-8 hyphens-auto">
                       {item.description}
                     </p>
 
@@ -74,7 +74,7 @@ export const WorkExperience = ({ lang }: { lang: Language }) => {
                       {item.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 rounded-lg text-xs font-medium border border-green-100 dark:border-green-800 transition-colors hover:bg-green-100 dark:hover:bg-green-900/40"
+                          className="px-3 py-1 bg-green-50 text-green-600 rounded-lg text-xs font-medium border border-green-100 transition-colors hover:bg-green-100"
                         >
                           {tech}
                         </span>
@@ -84,7 +84,7 @@ export const WorkExperience = ({ lang }: { lang: Language }) => {
                 </div>
 
                 {/* 2. Círculo con Número Central (Solo Desktop) */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center justify-center w-10 h-10 bg-green-500 rounded-full border-4 border-white dark:border-gray-900 z-10 shadow-lg reveal">
+                <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center justify-center w-10 h-10 bg-green-500 rounded-full border-4 border-white z-10 shadow-lg reveal">
                   <span className="text-white font-bold text-sm">{totalItems - index}</span>
                 </div>
 
