@@ -128,7 +128,8 @@ export const Navbar = ({ currentPath, lang }: { currentPath: string; lang: Langu
         {/* Lista desplegable móvil */}
         <ul className={`items-center gap-1 flex-col w-full pt-14 pb-2 ssr-mobile-only mobile-menu-list ${isOpen ? "flex is-open" : "hidden"}`}>
           {navLinks.map((link) => {
-            const isActive = currentPath === link.href || (currentPath === '' && link.href === '/');
+            // 💡 Se compara usando 'normalizedPath' en lugar de 'currentPath' directo
+            const isActive = normalizedPath === link.href || (normalizedPath === '' && link.href === '/');
             return (
               <li key={link.href} className="w-full text-center">
                 <a
@@ -155,7 +156,8 @@ export const Navbar = ({ currentPath, lang }: { currentPath: string; lang: Langu
 
           <ul className="flex items-center gap-1 flex-nowrap">
             {navLinks.map((link) => {
-              const isActive = currentPath === link.href || (currentPath === '' && link.href === '/');
+              // 💡 Se compara usando 'normalizedPath' en lugar de 'currentPath' directo
+              const isActive = normalizedPath === link.href || (normalizedPath === '' && link.href === '/');
               return (
                 <li key={link.href} className="shrink-0">
                   <a
